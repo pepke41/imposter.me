@@ -8,7 +8,7 @@
 </head>
 <body>
     <nav>
-        <div class="nav-wrapper">
+        <div id="general-style" class="nav-wrapper">
             <a href="/#" class="brand-logo">Imposter.me</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                <li><%= link_to "Message Board", posts_path%></li>
@@ -16,7 +16,7 @@
             </ul>
         </div>
     </nav>
-    <div>
+    <div id="general-style">
         <%= yield %>
     </div>
 </body>
