@@ -1,0 +1,2 @@
+module ImposterHelper
+end
