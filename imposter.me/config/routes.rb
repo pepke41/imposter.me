@@ -1,17 +1,14 @@
 Rails.application.routes.draw do
   resources :posts
+  resources :homes
 
-  get 'imposter/home'
-
-  get 'imposter/posts'
-
-  get 'imposter/resources'
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'imposter#home'
+  root 'home#show'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
