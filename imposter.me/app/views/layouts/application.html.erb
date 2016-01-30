@@ -7,8 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+    <nav>
+        <div class="nav-wrapper">
+            <a href="/#" class="brand-logo">Imposter.me</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+               <li><%= link_to "Message Board", posts_path%></li>
+               <li><%= link_to "Resources", '/#'%></li>
+            </ul>
+        </div>
+    </nav>
+    <div>
+        <%= yield %>
+    </div>
 </body>
 </html>
