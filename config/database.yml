@@ -9,9 +9,14 @@ default: &default
   pool: 5
   timeout: 5000
 
+
+#development:
+#  <<: *default
+#  database: db/development.sqlite3
+
 development:
-  adapter: postgresql
-  database: db/development.postgresql
+  adapter: sqlite3
+  database: db/development.postgres
   username: postgres
   password: corgi
   host: localhost
@@ -25,6 +30,6 @@ test:
   database: db/test.sqlite3
 
 production:
-  adapter: postgresql
+  adapter: db/test.postgres
   encoding: unicode
   pool: 5
