@@ -30,9 +30,10 @@ ActiveRecord::Schema.define(version: 20160130210250) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
+    t.string   "post_author_name"
     t.text     "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "resources", force: :cascade do |t|
@@ -44,12 +45,12 @@ ActiveRecord::Schema.define(version: 20160130210250) do
 
   create_table "taggings", force: :cascade do |t|
     t.integer  "tag_id"
-    t.integer  "article_id"
+    t.integer  "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "taggings", ["article_id"], name: "index_taggings_on_article_id"
+  add_index "taggings", ["post_id"], name: "index_taggings_on_post_id"
   add_index "taggings", ["tag_id"], name: "index_taggings_on_tag_id"
 
   create_table "tags", force: :cascade do |t|
