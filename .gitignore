@@ -16,3 +16,4 @@
 !/log/.keep
 /tmp
 /imposter.me/tmp/cache/
+db/development.postgres
