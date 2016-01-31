@@ -1,12 +1,13 @@
 @import "materialize";
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display);
 @import url(https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text);
 body {
     background-color: #ECEFF1;
     font-family: 'Roboto', sans-serif;
     #general-style {
-        h1, h2 {
-            font-family: 'Playfair Display', serif;
+        h1, h2, .brand-logo {
+            font-family: 'Crimson Text', serif;
         }
         margin-right: 10%;
         margin-left: 10%;

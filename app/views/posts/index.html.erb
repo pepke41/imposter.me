@@ -1,11 +1,14 @@
 <h1> All Posts </h1>
-<ul id="posts">
+<%= link_to "Create a New Post", new_post_path, class: "new_post waves-effect waves-light btn"%>
+
+
+<ul id="posts" class="collection">
 	<% @posts.each do |post| %>
-		<li>
+		<li class="collection-item">
 			<%= link_to post.title, post_path(post), class: 'post_title', id: "post_#{post.id}" %>
-			<%= post.body %>
-		</li>
+            <br>
+            <%= post.body %>    
+        </li>
 	<% end %>
 </ul>
 
-<%= link_to "Create a New Post", new_post_path, class: "new_post" %>
