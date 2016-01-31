@@ -13,11 +13,16 @@
     </div>
 </div>
 
+<p>
+	Tags:
+	<% @post.tags.each do |tag| %>
+		<%= link_to tag.name, tag_path(tag) %>
+		<% end %>
+</p>
 
 <ul class="collection with-header">
     <li class="collection-header"><h4>Comments (<%= @post.comments.size %>)</h4></li>
     <%= render partial: 'posts/comment', collection: @post.comments %>
 </ul>
-
 
 <%= render partial: 'comments/form' %>
