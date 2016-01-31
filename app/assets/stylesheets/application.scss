@@ -16,4 +16,16 @@ body {
         margin-right: 10%;
         margin-left: 10%;
     }
+    .page-header {
+        text-align: center;
+    }
+    .resource-articles {
+        text-align: center;
+        margin: auto;
+        article {
+            display: block;
+            margin: auto;
+            width: 100%;
+        }
+    }
 }

@@ -1,8 +1,8 @@
-<h1> All Posts </h1>
+<h1 class="page-header"> All Posts </h1>
 <%= link_to "Create a New Post", new_post_path, class: "new_post waves-effect waves-light btn"%>
 
 
-<ul id="posts" class="collection">
+<ul id="posts" class="collection hoverable">
 	<% @posts.each do |post| %>
 		<li class="collection-item">
 			<%= link_to post.title, post_path(post), class: 'post_title', id: "post_#{post.id}" %>
